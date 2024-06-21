@@ -1,0 +1,1457 @@
+*{
+   margin:0%;
+   padding:0%;
+   box-sizing: border-box;
+}
+
+html,body{
+   height: 100%;
+   width: 100%;
+}
+
+nav{
+    background-color: #16023b;
+    height: 13%;
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+}
+
+#fake_header{
+    background-color: yellow;
+    height: 13%;
+    width: 100%;
+}
+
+#logo{
+    height: 42%;
+    margin-left: 6.6%;
+    margin-right: 25%;  
+    cursor: pointer;
+}
+
+#logo img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#header2{
+    display: flex;
+    height: 90%;
+    width:48%;
+    justify-content: space-between;      
+    padding: 0.3%;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.text{
+    display: inline-flex;
+    align-items: center;
+    height: 90%;
+    margin-top: 3px;
+    font-size: small;
+    transition: 0.5s ease;
+}
+
+.text:hover{
+    color: rgb(211, 22, 22);
+    cursor: pointer;
+}
+
+#PACKAGE{
+    padding-right: 9px;
+    margin-right: 0px;
+}
+
+#package {
+    display: flex;
+}
+
+#packages{
+    position: relative;
+    top: 18.5px;
+    font-size: small;
+    margin-top: 3px;
+}
+
+#packages::after{
+    content:"";
+    position: absolute;
+    background-color: rgb(211, 22, 22);
+    height: 2.4px;
+    bottom: -13.8px;
+    left: 1px;
+    width: 0%;
+    transition: 0.5s ease;
+}
+
+#packages.active::after{
+    width: 100%;
+}
+
+#package i{
+    height: fit-content;
+    font-size: 1.3rem;
+    transform: translate(3px, 25px);
+    transition: .3s ease;
+}
+
+#dropdown{
+    background-color: #fff;
+    color: #000;
+    padding-top: 10px;
+    padding-right: 18px;
+    padding-left: 1.5rem;
+    padding-bottom: 10px;
+    line-height: 2.3rem;
+    border-radius: 10px;
+    font-family: sans-serif;
+    font-size: small;
+    position: absolute;
+    top: 70px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s ease;
+}
+
+#dropdown .dtexts{
+    width: 9.6rem;
+    cursor: pointer;
+    position: relative;
+}
+
+.dtexts::after{
+    content: "";
+    height: 2px;
+    width: 0%;
+    background-color: #ff4500;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    transition: 0.5s ease;
+}
+
+.dtexts:hover::after{
+    width: 100%;
+}
+
+#dropdown.active{
+    visibility: visible;
+    opacity: 1;
+}
+
+#home{
+    color: rgb(211, 22, 22);
+    margin-right: 17px;
+    position: relative;
+}
+
+#courses{
+    margin-right: 19px;
+    position: relative;
+}
+
+#about{
+    margin-right: 17px;
+    position: relative;
+    margin-left: -19px;
+}
+
+#signup{
+    background-color: white;
+    color: black;
+    font-family: sans-serif;
+    display: inline-flex;
+    align-items: center;
+    height: 90%;
+    margin: 3px 8px;
+    padding: 27px;
+    border-radius: .34rem;
+    position: relative;
+    z-index: 1;
+}
+
+#signup::before{
+    content: "";
+    height: 100%;
+    width: 0%;
+    background-color: #ff4500;
+    position: absolute;
+    left: 0px;
+    transition: .5s ease;
+    opacity: 0;
+}
+
+#signup::after{
+    content: "";
+    height: 100%;
+    width: 0%;
+    background-color: #ff4500;
+    position: absolute;
+    right: 0px;
+    transition: 0.5s ease;
+    opacity: 0;
+}
+
+#signup::before, #signup::after{
+    z-index: -1;
+}
+
+#signup:hover::before{
+    width: 50%;
+    opacity: 0.9;
+    border-top-left-radius: 0.34rem;
+    border-bottom-left-radius: 0.34rem;
+}
+
+#signup:hover::after{
+    width: 50%;
+    opacity: 0.9;
+    border-top-right-radius: 0.34rem;
+    border-bottom-right-radius: 0.34rem;
+}
+
+#signup:hover{
+    color: white;
+    cursor: pointer;
+}
+
+#currency{
+    border: none;
+    background-color: #16023b;
+    color: white;
+    padding-left: 15px;
+    padding-right: 10px;
+    border-radius: .46rem;
+    width: 14%;
+    height: 87%;
+    font-size: 1rem;
+    margin-top: .61%;
+}
+
+#currency option{
+    background-color: white;
+    color: #16023b;
+}
+
+#currency:hover{
+    cursor: pointer;
+}
+
+.text::after{
+    content:"";
+    position: absolute;
+    background-color: rgb(211, 22, 22);
+    height: 3px;
+    bottom: 2px;
+    left: 1px;
+    width: 0px;
+    transition: 0.5s ease;
+}
+
+#home::after{
+    content:"";
+    position: absolute;
+    background-color: rgb(211, 22, 22);
+    height: 3px;
+    bottom: 2px;
+    left: 1px;
+    width: 100%;
+    transition: 0.5s ease;
+}
+
+.text:hover::after{
+    width: 100%;
+}
+
+#page1{
+    height: 125%;
+    width: 100%;
+    background-color: #16023b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 0;
+    position: relative;
+}
+
+.wave {
+    position: absolute;
+    bottom: -15rem;
+    left: 0rem;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.wave svg {
+    display: block;
+    width: calc(284% + 1.3px);
+    height: 167px;
+    transform: rotateY(180deg);
+}
+
+.wave .shape-fill {
+    fill: #FFFFFF;
+}
+
+#slider{
+    height: 7.22rem;
+    width: 88.5%;
+    margin-top: 2px;
+    position: relative;
+    overflow: hidden;
+    transition: height  0.5s ease;
+}
+
+#slide{
+    height: 100%;
+    width: 200%;    
+    display: flex;
+}
+
+#slide .imgs{
+    object-fit: cover;
+    height: 100%;
+    width: 50%;
+    transition: transform .5s ease;
+}
+
+#slide .imgs.active1{
+    transform: translateX(-100%);
+    opacity: 1;
+}
+
+#slide .imgs.active21{
+    transform: translateX(-200%);
+    opacity: 1;
+}
+
+#slide .imgs.active22{
+    transform: translateX(0%);
+    opacity: 1;
+}
+
+#slide .imgs.original1{
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+#slide .imgs.original2{
+    transform: translateX(0%);
+    opacity: 0;
+}
+
+#slider i{
+    position: absolute;
+    background-color: #fff;
+    font-size: 1rem;
+    padding: 0px 2px 4px 2px;
+    border-radius: 50%;
+    font-weight: 700;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+#page1 #container{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 4.59rem;
+}
+
+#page1 #left_part{
+    width: 58.4%;
+    height: 100%;
+    margin-top: -20px;
+}
+
+#page1 #right_part{
+    background-color: yellow;
+    width: 36.8%;
+    height: 73%;
+    background-image: url("images/background_image.png");
+    background-size: cover;
+    margin-top: 3.8%;
+    margin-right: 2%;
+}
+
+#left_part #heading{
+    font-size: 3.59rem;
+    padding-left: 5.3rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+    font-weight: 400;
+    line-height: 5rem;
+}
+
+#left_part #heading span{
+    color: #198614;
+    font-weight: 500;
+    text-decoration: underline ;
+}
+
+#left_part #content{
+    padding-left: 11.6%;
+    font-size: 1.3rem;
+    font-weight: 450;
+    padding-top: 1rem;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 2.3rem;
+}
+
+#left_part #btns{
+    display: flex;
+    padding-left: 12.1%;
+    padding-top: 5%;
+}
+
+#left_part .btn{
+    font-size: 1.14rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 7px;
+    padding-bottom: 11px;
+    padding-left: 14px;
+    padding-right: 16px;
+    border-radius: 7.6px;
+    transition: 0.5s ease;
+}
+
+#left_part #btn1{
+    background-color: rgb(255, 209, 2);
+    margin-right: 19px;
+    border: .1px solid rgb(255, 209, 2);
+}
+
+#left_part #btn1:hover{
+    background-color: transparent;
+    cursor: pointer;
+    color:rgb(255, 209, 2);;
+}
+
+#left_part #btn2{
+    border: .1px solid #26ac36;
+    color: #198614
+}
+
+#left_part #btn2:hover{
+    color: #fff;
+    background-color: #198614;
+    cursor: pointer;
+}
+
+#left_part #foot{
+    margin-left: 13%;
+    display: flex;
+    align-items: center;
+}
+
+#left_part #foot #foot1{
+    padding-right: 10px;
+}
+
+#left_part .f_content{
+    font-size: .9rem;
+    font-weight: 500;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 23px;
+}
+
+#left_part i{
+    color: red;
+    padding-right: 7px;
+}
+
+#page2{
+    margin-top: 3%;
+    height: 76%;
+    width: 100%;
+    display: inline-flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#img_box{
+    width: 88.5%;
+    height: 18.08rem;
+    background-color: rgb(244, 241, 241);
+    display: flex;
+    position: relative;
+    border-radius: .6rem;
+    box-shadow: 0px 10px 10px -5px #888
+}
+
+#page2 .img{
+    position: absolute;
+    top: 6.4%;
+}
+
+#page2 #img1{
+    left: 1.5%;
+    height: 89%;
+    width: 48.5%;
+    z-index: 3;
+    position: relative;
+}
+
+#page2 #img1::after{
+    content: "";
+    height: 100%;
+    width: 2px;
+    background-color: #000;
+    position: absolute;
+    right: -20px;
+}
+
+#page2 #img1 img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#page2 #img2{
+    right: 1.5%;
+    z-index: 0;
+    height: 81%;
+    width: 44%;
+}
+
+#page2 #img2 img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#page2 #heading{
+    width: 76%;
+    text-align: center;
+    margin-top: 3.3rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#page2 h1{  
+    font-size: 2.35rem;
+    font-weight: bolder;
+}
+
+#page3{
+    width: 100%;
+    height: auto;
+}
+
+#page3 #container{
+    display: inline-flex;
+}
+
+#page3 #left_part{
+    width: 55%;
+    height: 21.6rem;
+}
+
+#page3 .content{
+    font-size: 1.13rem;
+    padding-top: 1.5rem;
+    padding-left: 5.3rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 23px;
+}
+
+#page3 #left_part span{
+    font-size: 1.2rem;
+}
+
+#page3 #right_part{
+    margin-top: 1.7rem;
+    height: 15.5rem;
+    width: 34.7%;
+    margin-left: 3.5%;
+    background-color: rgb(236, 248, 254);
+    overflow: hidden;
+}
+
+#page3 #right_part #layer{
+    height: 500%;
+    width: 100%;
+    position: relative;
+}
+
+#page3 #right_part #layer .logos{
+    height: calc(100% / 5);
+    width: 100%;
+}
+
+#page3 #right_part #layer .logos img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#page3 #foot{
+    margin-top: 1.9%;
+    text-align: center;
+    line-height: 2.7rem;
+}
+
+#page3 h1{
+    font-size: 2.7rem;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#page3 p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#page4{
+    height: 110%;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#page4 #boxes{
+    width: 94.6%;
+    height: 30rem;
+    display: flex;
+    margin-top: 2.8rem;
+    position: relative;
+}
+
+#page4 .box{
+    height: 26.8rem;
+    position: absolute;
+    width: 19.4%;
+    top: 1rem;
+    border-radius: 2rem;
+    box-shadow: 0px 4px 17px -4px #888;
+}
+
+#page4 #box1{
+    left: 3.6rem;
+}
+
+#page4 #box2{
+    left: 21.2rem;
+}
+
+#page4 #box3{
+    left: 38.6rem;
+}
+
+#page4 #box4{
+    right: 4.2rem;
+}
+
+.box #rec{
+    background-color: yellow;
+    height: 6%;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: calc(100% - 1.5rem * 2);
+    position: absolute;
+    border-radius: 1.4px 1.4px .45rem .45rem;
+    top: 0;
+    color: #000;
+}
+
+.box #top_cont{
+    background-color: #16023b;
+    height: 32.5%;
+    width: 100%;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+    font-weight: 400;
+}
+
+.box #mid_cont{
+    height: calc(100% - 32.5% - 11%);
+    margin-top: 6.9%;
+    cursor: default;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.box #mid_cont .contents{
+    display: flex;
+    font-size: 1rem;
+    font-weight: 450;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-left: 8.2%;
+    padding-right: 7%;
+}
+
+.box #btm_cont{
+    background-color: rgb(94, 166, 248);
+    height: 10%;
+    width: 50%;
+    position: absolute;
+    left: 25%;
+    bottom: -4.5%;
+    border-radius: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+    font-size: .94rem;
+    transition: 0.3s ease;
+}
+
+.box #btm_cont:hover{
+    cursor: pointer;
+    color: #000;
+    background-color: rgb(255, 255, 0);
+}
+
+#page4 .box i{
+    margin-top: 1.2%;
+    font-size: .8rem;
+    font-weight: 900;
+    padding-right: 5%;
+    color: rgb(8, 91, 244);
+}
+
+#page4 #foot{
+    height: 4rem;
+    width: 60%;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2.66rem;
+    font-weight: 700;
+    margin-top: 3rem;
+}
+
+#page5{
+    height: 105%;
+    width: 100%;
+    display: flex;
+}
+
+#page5 #left_part{
+    width: 50%;
+    height: 100%;
+}
+
+#page5 #right_part{
+    width: 50%;
+    height: 100%;
+}
+
+#page5 #left_container{
+    height: 26.7em;
+    width: 67.5%;
+    background-color: #16023b;
+    margin-top: 19.6%;
+    margin-left: 13.7%;
+    border-radius: 2.1rem;
+    position: relative;
+}
+
+#page5 #left_container img{
+    height: 83.3%;
+    width: 83.2%;
+    object-fit: cover;
+    margin-left: 8.5%;
+    margin-top: 8.5%;
+}
+
+#page5 #left_container #content{
+    height: 21%;
+    width: 90%;
+    position: absolute;
+    bottom: 4.7%;
+    left: 5%;
+    background-color: #fff;
+    color: #000;
+    border-radius: .87rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#page5 #left_container p#head{
+    margin-left: -9.7%;
+    font-weight: 700;
+}
+
+#page5 #left_container p#mid{
+    margin-left: -9.8%;
+    font-size: .97rem;
+    margin-top: -3%;
+    font-weight: 700;
+}
+
+#page5 #right_part #top{
+    height: 9rem;
+    width: 100%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2.6rem;
+    font-weight: 300;
+    padding: 6.2% 15% 0% 2%;
+    line-height: 3.1rem;
+    color: rgb(54, 54, 225);
+}
+
+#page5 #right_part #head{
+    height: 3rem;
+    width: 100%;
+    margin-top: 1.9rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-left: 2%;
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+
+#page5 #right_part #mid{
+    height: 15rem;
+    width: 100%;
+    margin-top: 3px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding-left: 2%;
+    font-size: 1rem;
+    line-height: 1.65rem;
+    padding-right: 13%;
+}
+
+#page5 #right_part #btm{
+    height: 3.6rem;
+    width: 13.1rem;
+    border-radius: 12px;
+    margin: 9% 2%;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
+}
+
+#page6{
+    height: 70%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    align-items: center;
+    background: radial-gradient(circle at 50% 55%, rgba(251, 197, 61, 0.358) 0%, transparent 45%),radial-gradient(circle at 20% 65%, rgba(100, 248, 194, 0.5) 0%, transparent 25%),radial-gradient(circle at 80% 65%, rgba(112, 133, 236, 0.5) 0%, transparent 25%);
+    background-blend-mode: multiply;
+    background-size: cover;
+}
+
+#page6 #top{
+    height: 6rem;
+    width: 50%;
+    text-align: center;
+    margin-top: 1.8rem;
+}
+
+#page6 #top span{
+    font-size: 2.9rem;
+    font-weight: 500;
+}
+
+#page6 #top p{
+    font-size: 1.1rem;
+    padding-top: 3px;
+}
+
+#page6 #bottom{
+    height: 10rem;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 13px;
+}
+
+#page6 #bottom .container{
+    height: 8rem;
+    width: calc(100% / 6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#page6 #bottom span{
+    font-size: 3.37rem;
+    font-weight: 700;
+}
+
+#page6 #bottom p{
+    font-size: 1.18rem;
+    padding-top: 7px;
+}
+
+#page7{
+    height: 100%;
+    width: 100%;
+}
+
+#page7 #container{
+    height: 26.5rem;
+    width: 100%;
+    background-color: #16023b;
+    position: relative;
+}
+
+#page7 #container #box1{
+    height: fit-content;
+    width: fit-content;
+    padding: 3rem 0 0 5.2rem;
+    color: #fff;
+    font-size: 4.7rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+}
+
+#page7 #container #box2{
+    height: fit-content;
+    width: 45%;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.27rem;
+    padding: 5px 0 0 5.4rem;
+}
+
+#page7 #container #box3{
+    height: 4.14rem;
+    width: 39.04%;
+    margin-top: 4rem;
+    margin-left: 6.7%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#page7 #container #box3 .btn{
+    height: 100%;
+    width: calc(100% / 2 - 4.7%);
+    border-radius: 8px;
+}
+
+#page7 #container #box3 #btn1{
+    background-image: url("images/GooglePlay.png");
+    background-size: cover;
+    cursor: pointer;
+}
+
+#page7 #container #box3 #btn2{
+    background-image: url("images/AppStore.png");
+    background-size: cover;
+    cursor: pointer;
+}
+
+#page7 #container #imgbox{
+    height: 608px;
+    width: 342px;
+    position: absolute;
+    top: -6.7rem;
+    right: 6.3rem;
+    background-image: url("images/Mobile.png");
+    background-size: cover;
+}
+
+#page8{
+    height: 102%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#page8 #top{
+    height: fit-content;
+    width: fit-content;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    padding-top: 3rem;
+}
+
+#page8 #btm{
+    height: fit-content;
+    width: fit-content;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400; 
+    padding-top: 5px;
+    font-size: 1rem;
+}
+
+#page8 #coontainer{
+    height: 23.6rem;
+    width: 88.4%;
+    margin-top: 3.3rem;
+    overflow: hidden;
+    position: relative;
+}
+
+#page8 #coontainer #imagebox{
+    height: 88.5%;
+    width: 200%;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+}
+
+#page8 #coontainer #imagebox .image{
+    height: 100%;
+    width: calc(100% / 9.3);
+    border-radius: 2rem;
+    box-shadow: 0px 4px 19px -5px #888;
+    position: absolute;
+    right: 0;
+    animation: animate 30s linear infinite;
+    cursor: pointer;
+}
+
+@keyframes animate{
+    100%{
+        transform: translateX(-950%);
+    }
+}
+
+#page8 #coontainer #imagebox .image #upper{
+    height: 76.8%;
+    width: 100%;
+    border-radius: 2rem;
+}
+
+#page8 #coontainer #imagebox .image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 2rem;
+}
+
+#page8 #coontainer #imagebox .image #middle{
+    width: 100%;
+    height: 8%;
+    margin-top: 1rem;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+#page8 #coontainer #imagebox .image #lower{
+    height: 6%;
+    width: 100%;
+    text-align: center;
+    margin-top: .01rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: .91rem;
+    padding-top: 1px;
+}
+
+#page9{
+    height: 90%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#page9 #triangle{
+    width: 71.4%;
+    height: 100%;
+    clip-path: polygon(0% 0%, 0% 100%, 100% 100%);
+    background-color: #16023b;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#page9 #head1{
+    height: fit-content;
+    width: fit-content;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2.63rem;
+    font-weight: 500;
+    cursor: default;
+}
+
+#page9 #head2{
+    height: fit-content;
+    width: fit-content;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.1rem;
+    padding-top: 10px;
+    cursor: default;
+}
+
+#page9 .container{
+    height: calc(100% - 2.63rem - 10px - 3rem);
+    width: 90%;
+    margin-top: 1.3rem;
+    display: flex;
+}
+
+#page9 .container #left{
+    height: 18.6rem;
+    width: 46.7%;
+    margin-left: 2.2%;
+    background-image: url("images/Astitva.jpg");
+    background-size: cover;
+}
+
+#page9 .container #right{
+    height: 24.45rem;
+    width: calc(100% - 46.7% - 2.2% - 25px);
+    margin-left: 25px;
+    /* background-color: red; */
+    overflow: hidden;
+}
+
+#page9 .container #right #layer{
+    height: 460%;
+    width: 100%;
+    /* background-color: yellow; */
+    margin-top: -2.18rem;
+}
+
+#page9 .container #right #layer .layers{
+    height: calc(100% / 11);
+    width: 97%;
+    /* background-color: chartreuse; */
+    margin: 35px 0px;
+    border: .3px solid #888;
+    border-radius: 2rem;
+    position: relative;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#page9 .container #right #layer .layers:hover{
+    border: .2px solid rgb(3, 144, 252);
+}
+
+#page9 .container #right #layer .layers #circularImage{
+    position: absolute;
+    /* background-color: blue; */
+    border-radius: 50%;
+    height: 8.5rem;
+    width:  8.5rem;
+    top: .9rem;
+    left: 1.9rem;
+}
+
+#page9 .container #right #layer .layers #circularImage img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+#page9 .container #right #layer .layers #rightSlider{
+    /* background-color: red; */
+    height: 100%;
+    width: 64.5%;
+    position: relative;
+    margin-left: 12rem;
+}
+
+#page9 .container #right #layer .layers #name{
+    height: auto;
+    width: 11.8rem;
+    /* background-color: blue; */
+    font-size: 1.389rem;
+    padding-top: .8665rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+
+#page9 .container #right #layer .layers #star{
+    position: absolute;
+    top: 0;
+    right: 2rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* background-color: pink; */
+    width: 5.8rem;
+    font-size: .88rem;
+    padding-top: .8665rem;
+    color: yellow;
+}
+
+#page9 .container #right #layer .layers #star i{
+    padding-bottom: 5px;
+}
+
+#page9 .container #right #layer .layers #content{
+    /* background-color: cornsilk; */
+    height: 4.3rem;
+    width: 90%;
+    margin-top: .45rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #888;
+}
+
+#page9 .container #right #layer .layers span{
+    font-weight: 500;
+}
+
+#page9 .container #right #layer .layers #readMore{
+    position: absolute;
+    bottom: 8px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(94, 184, 252);
+}
+
+#page9 #dot{
+    height:6px;
+    width: 6px;
+    clip-path: circle(50%);
+    background-color: #fff;
+    position: absolute;
+    bottom: 18.7px;
+    left: 27.68%;
+    cursor: pointer;
+}
+
+#page10{
+    max-height: 250%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#page10 #head{
+    height: fit-content;
+    width: fit-content;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2.8rem;
+    padding-top: 5rem;
+}
+
+#page10 #mid{
+    height: fit-content;
+    width: fit-content;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding-top: .6rem;
+    font-size: .91rem;
+}
+
+#page10 #cont{
+    width: 73.7%;
+    max-height: 80rem;
+    margin-top: 3.098rem;
+    border-radius: 1.3rem;
+    box-shadow: 0px 10px 30px -10px #888;
+}
+
+#page10 .q{
+    height: 2rem;
+    width: 95%;
+    margin-top: 1.1rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.4rem;
+    margin-left: 2rem;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    cursor: pointer;
+}
+
+#page10 #q1{
+    margin-top: 2.5rem;
+}
+
+#page10 .q i{
+    font-size: 1.7rem;
+    border-radius: 50%;
+    padding: 0px 2px;
+    border: .8px solid black;
+    position: absolute;
+    right: 0;
+    top: -3px;
+    transition: 0.5s ease;
+    transform: rotate(0deg);
+}
+
+#page10 .q i.active{
+    transform: rotate(180deg);
+}
+
+#page10 .a{
+    height: 0rem;
+    width: 89%;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.246rem;
+    margin-left: 2.98rem;
+    margin-top: 10px;
+    overflow: hidden;
+    transition: height  0.5s ease;
+}
+
+#page10 #a11{
+    margin-bottom: 2rem;
+}
+
+#page10 .a.active2{
+    height: 3.1rem;
+}
+
+#page10 .a.active3{
+    height: 4.2rem; 
+
+}
+
+#page10 .a.active5{
+    height: 7rem;
+}
+
+#page10 .a.active4{
+    height: 5.6rem;
+}
+
+#page10 #box1{
+    height: fit-content;
+    width: fit-content;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2.79rem;
+    padding-top: 2.8rem;
+}
+
+#page10 #box2{
+    height: fit-content;
+    width: fit-content;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.3rem;
+    padding-top: .47rem;
+}
+
+#page10 #box2 span{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+}
+
+#page10 #box3{
+    height: 4.1rem;
+    width: 40%;
+    margin-top: 1.6rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+#page10 #box3 .btn{
+    height: 100%;
+    width: 44.7%;
+    border-radius: 10px;
+    background-color: #16023b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.26rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    cursor: pointer;
+}
+
+#page10 #box3 .btn i{
+    font-size: 2.2rem;
+    padding-right: 5px;
+}
+
+#page10 #box4{
+    height: fit-content;
+    width: fit-content;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    padding-top: 36px;
+    font-size: .987rem;
+    padding-bottom: 18px;
+}
+
+#leg{
+    height: 22.6rem;
+    width: 100%;
+    background-color: #16023b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#leg #containerrr{
+    height: 57%;
+    width: 87%;
+    margin-top: 2.6rem;
+    display: inline-flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+#leg #containerrr .box{
+    min-height: 80%;
+    max-width: 32.7%;
+    font-family: 'Times New Roman', Times, serif;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+#leg #containerrr .box p{
+    padding-top: 5px;
+    cursor: pointer;
+}
+
+#leg #containerrr #box1 #logoo{
+    height: 3rem;
+    width: 16rem;
+    margin-top: 6px;
+    margin-bottom: 13px;
+    cursor: pointer;
+}
+
+#leg #containerrr #box1 #logoo img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#leg #containerrr .box p.head{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.4rem;
+    text-decoration: underline dotted;
+    text-underline-offset: 11px;
+    padding: .88rem 0 23px 0;
+    cursor: text;
+}
+
+#leg #containerrr::after{
+    content: "";
+    height: 4px;
+    width: 100%;
+    position: absolute;
+    background-color: #474363;
+    bottom: -47px;
+}
+
+#leg #copyright{
+    height: fit-content;
+    width: fit-content;
+    font-size: 1.23rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: 4.3rem;
+    color: #fff;
+}
