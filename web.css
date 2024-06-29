@@ -1147,7 +1147,6 @@ nav{
 
 #page9 .container #right #layer .layers #circularImage{
     position: absolute;
-    /* background-color: blue; */
     border-radius: 50%;
     height: 8.5rem;
     width:  8.5rem;
@@ -1163,7 +1162,6 @@ nav{
 }
 
 #page9 .container #right #layer .layers #rightSlider{
-    /* background-color: red; */
     height: 100%;
     width: 64.5%;
     position: relative;
@@ -1173,7 +1171,6 @@ nav{
 #page9 .container #right #layer .layers #name{
     height: auto;
     width: 11.8rem;
-    /* background-color: blue; */
     font-size: 1.389rem;
     padding-top: .8665rem;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -1187,7 +1184,6 @@ nav{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    /* background-color: pink; */
     width: 5.8rem;
     font-size: .88rem;
     padding-top: .8665rem;
@@ -1199,7 +1195,6 @@ nav{
 }
 
 #page9 .container #right #layer .layers #content{
-    /* background-color: cornsilk; */
     height: 4.3rem;
     width: 90%;
     margin-top: .45rem;
