@@ -14,6 +14,8 @@ const btns=document.querySelectorAll("#page10 i");
 const boxs=document.querySelectorAll("#page3 #right_part #layer .logos");
 const slide=document.querySelectorAll("#page8 #coontainer #imagebox .image");
 const rightslider=document.querySelectorAll("#page9 .container #right #layer .layers");
+const home=document.querySelector("#home");
+const about=document.querySelector("#about");
 
 logo.addEventListener("click",()=>{
     location.replace(location.href);
@@ -182,3 +184,7 @@ var repeat4=()=>{
 }
 
 repeat4();
+
+about.addEventListener("click",()=>{
+    window.location.href="about.html";
+});
