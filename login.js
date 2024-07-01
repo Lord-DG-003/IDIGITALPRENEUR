@@ -1,4 +1,14 @@
-const home=document.querySelector("#home");
+document.addEventListener('DOMContentLoaded', () => {
+    const togglePassword = document.querySelector('.toggle-password');
+    const passwordField = document.querySelector('input[type="password"]');
+    
+    togglePassword.addEventListener('click', () => {
+        const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
+        passwordField.setAttribute('type', type);
+        togglePassword.textContent = type === 'password' ? '\uD83D\uDC41' : '\uD83D\uDC40'; // Eye icons
+    });
+});
+
 const package=document.querySelector("#package");
 const packages=document.querySelector("#packages");
 const icon=document.querySelector("#package i");
@@ -6,10 +16,6 @@ const dropdown=document.querySelector("#dropdown");
 const PACKAGE= document.querySelector("#PACKAGE");
 const text=document.querySelector(".text");
 const logo=document.querySelector("#logo");
-
-home.addEventListener("click",()=>{
-    window.location.href="index.html";
-})
 
 logo.addEventListener("click",()=>{
     location.replace(location.href);

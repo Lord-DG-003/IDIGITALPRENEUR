@@ -1,0 +1,451 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+   margin:0%;
+   padding:0%;
+   box-sizing: border-box;
+}
+
+html,body{
+   height: 100%;
+   width: 100%;
+}
+
+nav{
+    background-color: #16023b;
+    height: 13%;
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+}
+
+#fake_header{
+    background-color: yellow;
+    height: 13%;
+    width: 100%;
+}
+
+#logo{
+    height: 42%;
+    margin-left: 6.6%;
+    margin-right: 25%;  
+    cursor: pointer;
+}
+
+#logo img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#header2{
+    display: flex;
+    height: 90%;
+    width:48%;
+    justify-content: space-between;      
+    padding: 0.3%;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.text{
+    display: inline-flex;
+    align-items: center;
+    height: 90%;
+    margin-top: 3px;
+    font-size: small;
+    transition: 0.5s ease;
+}
+
+.text:hover{
+    color: rgb(211, 22, 22);
+    cursor: pointer;
+}
+
+#PACKAGE{
+    padding-right: 9px;
+    margin-right: 0px;
+}
+
+#package {
+    display: flex;
+}
+
+#packages{
+    position: relative;
+    top: 18.5px;
+    font-size: small;
+    margin-top: 3px;
+}
+
+#packages::after{
+    content:"";
+    position: absolute;
+    background-color: rgb(211, 22, 22);
+    height: 2.4px;
+    bottom: -13.8px;
+    left: 1px;
+    width: 0%;
+    transition: 0.5s ease;
+}
+
+#packages.active::after{
+    width: 100%;
+}
+
+#package i{
+    height: fit-content;
+    font-size: 1.3rem;
+    transform: translate(3px, 25px);
+    transition: .3s ease;
+}
+
+#dropdown{
+    background-color: #fff;
+    color: #000;
+    padding-top: 10px;
+    padding-right: 18px;
+    padding-left: 1.5rem;
+    padding-bottom: 10px;
+    line-height: 2.3rem;
+    border-radius: 10px;
+    font-family: sans-serif;
+    font-size: small;
+    position: absolute;
+    top: 70px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s ease;
+}
+
+#dropdown .dtexts{
+    width: 9.6rem;
+    cursor: pointer;
+    position: relative;
+}
+
+.dtexts::after{
+    content: "";
+    height: 2px;
+    width: 0%;
+    background-color: #ff4500;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    transition: 0.5s ease;
+}
+
+.dtexts:hover::after{
+    width: 100%;
+}
+
+#dropdown.active{
+    visibility: visible;
+    opacity: 1;
+}
+
+#home{
+    margin-right: 17px;
+    position: relative;
+}
+
+#courses{
+    margin-right: 19px;
+    position: relative;
+}
+
+#about{
+    margin-right: 17px;
+    position: relative;
+    margin-left: -19px;
+}
+
+#signup{
+    background-color: white;
+    color: black;
+    font-family: sans-serif;
+    display: inline-flex;
+    align-items: center;
+    height: 90%;
+    margin: 3px 8px;
+    padding: 27px;
+    border-radius: .34rem;
+    position: relative;
+    z-index: 1;
+}
+
+#signup::before{
+    content: "";
+    height: 100%;
+    width: 0%;
+    background-color: #ff4500;
+    position: absolute;
+    left: 0px;
+    transition: .5s ease;
+    opacity: 0;
+}
+
+#signup::after{
+    content: "";
+    height: 100%;
+    width: 0%;
+    background-color: #ff4500;
+    position: absolute;
+    right: 0px;
+    transition: 0.5s ease;
+    opacity: 0;
+}
+
+#signup::before, #signup::after{
+    z-index: -1;
+}
+
+#signup:hover::before{
+    width: 50%;
+    opacity: 0.9;
+    border-top-left-radius: 0.34rem;
+    border-bottom-left-radius: 0.34rem;
+}
+
+#signup:hover::after{
+    width: 50%;
+    opacity: 0.9;
+    border-top-right-radius: 0.34rem;
+    border-bottom-right-radius: 0.34rem;
+}
+
+#signup:hover{
+    color: white;
+    cursor: pointer;
+}
+
+#currency{
+    border: none;
+    background-color: #16023b;
+    color: white;
+    padding-left: 15px;
+    padding-right: 10px;
+    border-radius: .46rem;
+    width: 14%;
+    height: 87%;
+    font-size: 1rem;
+    margin-top: .61%;
+}
+
+#currency option{
+    background-color: white;
+    color: #16023b;
+}
+
+#currency:hover{
+    cursor: pointer;
+}
+
+.text::after{
+    content:"";
+    position: absolute;
+    background-color: rgb(211, 22, 22);
+    height: 3px;
+    bottom: 2px;
+    left: 1px;
+    width: 0px;
+    transition: 0.5s ease;
+}
+
+.text:hover::after{
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 110%;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+h1,h2,h3,h4,h5,h6,p{
+    font-family: Roboto;
+}
+
+.welcome-section {
+    background-color: #168eff;
+    color: white;
+    padding: 40px;
+    width: 55%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    clip-path: ellipse(70% 115% at 30% 0%);
+}
+
+.welcome-section h1 {
+    font-size: 2.5em;
+}
+
+.welcome-section p {
+    margin: 20px 0;
+    font-size: 1.2em;
+}
+
+.welcome-section button {
+    background-color: transparent;
+    color: #fff;
+    font-weight: 550;
+    border: 2px solid #fff;
+    padding: 10px 32px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.signin-section {
+    background-color: white;
+    padding: 40px;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5rem;
+    text-align: center;
+}
+
+.signin-section p {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    font-weight: 400;
+    color: #3d3b3b;
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 15px;
+    width: 75%;
+    margin-left: 5rem;
+}
+
+.input-container input {
+    width: 100%;
+    padding: 17px 4rem;
+    font-size: 1.1rem;
+    border: 1px solid #ebebeb;
+    border-radius: 1.7rem;
+    background-color: #ebebeb;
+    color: #000;
+}
+
+::-webkit-input-placeholder{
+    color: #b4b4b4;
+}
+
+.input-container span.user{
+    position: absolute;
+    top: 19px;
+    left: 22px;
+    font-size: 1.1rem;
+    color: #b4b4b4;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 16px;
+    top: 13px;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.forgot-password {
+    color: #3498db;
+    text-decoration: none;
+    font-size: .99rem;
+    position: absolute;
+    font-family: Roboto;
+    right: 0;
+    bottom: -1.6rem;
+}
+
+.signin-section button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 15px 3rem;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 1.6rem;
+    margin-top: 3.3rem;
+}
+
+#leg{
+    height: 22.6rem;
+    width: 100%;
+    background-color: #16023b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#leg #containerrr{
+    height: 57%;
+    width: 87%;
+    margin-top: 2.6rem;
+    display: inline-flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+#leg #containerrr .box{
+    min-height: 80%;
+    max-width: 32.7%;
+    font-family: 'Times New Roman', Times, serif;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+#leg #containerrr .box p{
+    padding-top: 5px;
+    cursor: pointer;
+}
+
+#leg #containerrr #box1 #logoo{
+    height: 3rem;
+    width: 16rem;
+    margin-top: 6px;
+    margin-bottom: 13px;
+    cursor: pointer;
+}
+
+#leg #containerrr #box1 #logoo img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#leg #containerrr .box p.head{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.4rem;
+    text-decoration: underline dotted;
+    text-underline-offset: 11px;
+    padding: .88rem 0 23px 0;
+    cursor: text;
+}
+
+#leg #containerrr::after{
+    content: "";
+    height: 4px;
+    width: 100%;
+    position: absolute;
+    background-color: #474363;
+    bottom: -47px;
+}
+
+#leg #copyright{
+    height: fit-content;
+    width: fit-content;
+    font-size: 1.23rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: 4.3rem;
+    color: #fff;
+}
