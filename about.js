@@ -1,4 +1,3 @@
-const home=document.querySelector("#home");
 const package=document.querySelector("#package");
 const packages=document.querySelector("#packages");
 const icon=document.querySelector("#package i");
@@ -6,9 +5,15 @@ const dropdown=document.querySelector("#dropdown");
 const PACKAGE= document.querySelector("#PACKAGE");
 const text=document.querySelector(".text");
 const logo=document.querySelector("#logo");
+const home=document.querySelector("#home");
+const login=document.querySelector("#signup");
 
 home.addEventListener("click",()=>{
     window.location.href="index.html";
+})
+
+login.addEventListener("click",()=>{
+    window.location.href="login.html";
 })
 
 logo.addEventListener("click",()=>{

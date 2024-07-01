@@ -16,6 +16,8 @@ const dropdown=document.querySelector("#dropdown");
 const PACKAGE= document.querySelector("#PACKAGE");
 const text=document.querySelector(".text");
 const logo=document.querySelector("#logo");
+const home=document.querySelector("#home");
+const about=document.querySelector("#about");
 
 logo.addEventListener("click",()=>{
     location.replace(location.href);
@@ -36,4 +38,12 @@ PACKAGE.addEventListener("mouseout",()=>{
     package.style.cursor= "default";
     packages.classList.remove("active");
     packages.style.color= "#fff";
+})
+
+home.addEventListener("click",()=>{
+    window.location.href="index.html";
+})
+
+about.addEventListener("click",()=>{
+    window.location.href="about.html";
 })

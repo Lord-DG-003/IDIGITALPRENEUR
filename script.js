@@ -16,6 +16,7 @@ const slide=document.querySelectorAll("#page8 #coontainer #imagebox .image");
 const rightslider=document.querySelectorAll("#page9 .container #right #layer .layers");
 const home=document.querySelector("#home");
 const about=document.querySelector("#about");
+const login=document.querySelector("#signup");
 
 logo.addEventListener("click",()=>{
     location.replace(location.href);
@@ -188,3 +189,7 @@ repeat4();
 about.addEventListener("click",()=>{
     window.location.href="about.html";
 });
+
+signup.addEventListener("click",()=>{
+    window.location.href="login.html";
+})
